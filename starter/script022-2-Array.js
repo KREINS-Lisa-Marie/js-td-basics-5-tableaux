@@ -16,10 +16,13 @@ const mines = [[0, 1, 0, 1],
              [1, 0, 1, 0], 
              [0, 0, 0, 0]];
 
-for (let i = 0; i < mines.length; i++) {
+
+// pour parcourir le tableau
+
+for (let i = 0; i < mines.length; i++) {        // pour parcourir chacune des lignes
     console.log(mines[i]);
-    for (let j = 0; j < mines[i].length; j++) {
-        console.log(mines[i][j]);
+    for (let j = 0; j < mines[i].length; j++) {     // mines[i].length   car = longeur des lignes // pour parcourir chacune des  colonnes
+        console.log(mines[i][j]);       // tableau 2 dimensions
     }
 }
 
@@ -43,9 +46,13 @@ console.log(mines[1][2]);
 
 
 // Testez de la même manière l'emplacement situé en première ligne quatrième colonne
-
+console.log(mines[0][3]);
 
 // Etape 2 :
 // Pour indiquer combien de mines contient la première ligne de ce tableau,
 // vous devez parcourir les éléments de cette ligne et compter combien d'entre eux sont égaux à 1.
+console.log(mines[0][mines.length]);
 
+//for (let i = 0; i < mines.length; i++) {
+  //  if ()
+//}

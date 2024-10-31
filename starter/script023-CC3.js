@@ -21,7 +21,7 @@ function calculateurPourboire(factures) {
     const montantsFinaux = [];
     for (const facture of factures) {
         if (facture<50 ){
-            pourboires.push(facture*0.2);
+            pourboires.push(facture*0.2); // valeur qu'on va pousser dans le tableau
         }else if(facture<200){
             pourboires.push(facture*0.15);
         }else{

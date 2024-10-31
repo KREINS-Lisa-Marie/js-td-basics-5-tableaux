@@ -19,7 +19,7 @@ console.log(jours[6]);
 // 4. Modifier les données d'un tableau
 // EXERCICE 4 : Modifiez "samedi" en "saturday", réaffichez le tableau, stockez "dimanche" dans une variable jourFerie, affichez le contenu de la variable, ajoutez un nouveau jour, "dimanche2", à la fin de la semaine, puis réaffichez le tableau des jours de la semaine.
 
-jours [5]= "saturday";
+jours [5]= "saturday";  // pour changer la valeur de samedi
 const joursFerie = "dimanche";
 console.log(joursFerie);
 jours.push("dimanche2");
