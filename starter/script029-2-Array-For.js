@@ -10,12 +10,26 @@ const films = ["Forrest Gump", "Bohemian Rhapsody", "Le Seigneur des anneaux", "
 //    1°) avec une boucle for
 console.log("Avec une boucle for :");
 
+for (let film of films) {
+    console.log(film);
+}
 
 //    2°) avec une boucle while
 console.log("Avec une boucle while :");
 
+let i = 0;
+while (i <= films.length){
+    console.log(films[i]);
+    i++;
+}
+
 //    3°) avec une boucle for of
 console.log("Avec une boucle for of :");
+
+
+for (let film of films) {
+    console.log(film);
+}
 
 
 // EXERCICE 2 :
@@ -26,10 +40,26 @@ const john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 //    1°) avec une boucle for
 console.log("Avec une boucle for :");
 
+for (let i= 0; i<=john.length; i++){
+    console.log(john[i]);
+}
+
 //    2°) avec une boucle while
 console.log("Avec une boucle while :");
 
+let j= 0;
+while (j<=john.length){
+    console.log(john[j]);
+    j++;
+}
+
 //    3°) avec une boucle for of
+
+console.log("Avec une boucle for of :");
+
+for (let johnElement of john) {
+    console.log(johnElement);
+}
 
 
 // EXERCICE 3 :
@@ -38,12 +68,17 @@ const nombres = [1, 2, 3, 4, 5];
 
 // - Affichez "Voici mon tableau de nombres :" suivi du tableau.
 
+console.log("Voici mon tableau de nombres :");
+console.log(nombres)
 
 // - Créez un tableau vide "carres" qui contiendra les carrés de vos nombres.
 const carres = [];
 
 // - Parcourez le tableau "nombres" avec une boucle forEach et ajoutez dans le tableau "carres" le carré de chaque nombre.
-
-
+for (const nombre of nombres) {
+    carres.push(nombre*nombre);
+}
 // - Affichez "Voici mon tableau de nombres au carré :" suivi du tableau contenant les carrés.
 
+console.log("Voici mon tableau de nombres au carré :");
+console.log(carres);

@@ -33,4 +33,5 @@ function calculateurPourboire(factures) {
     }
     return montantsFinaux;
 }
-console.log(montantsFinaux|], )
+console.log(pourboires);
+console.log(montantsFinaux);

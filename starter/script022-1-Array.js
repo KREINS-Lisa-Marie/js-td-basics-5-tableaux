@@ -31,6 +31,11 @@ const mesElements =[1, 'test', true];
 
 // 6. Méthodes associées à un tableau
 // EXERCICE 5 : Suivez les consignes pour manipuler le tableau de fruits
+
+
+/*
 jours[5] = 'jour ferié';
 jours[9]= 'test';
 console.table(jours);
+
+ */
