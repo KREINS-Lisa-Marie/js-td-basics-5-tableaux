@@ -19,12 +19,12 @@ const mines = [[0, 1, 0, 1],
 
 // pour parcourir le tableau
 
-for (let i = 0; i < mines.length; i++) {        // pour parcourir chacune des lignes
-    console.log(mines[i]);
-    for (let j = 0; j < mines[i].length; j++) {     // mines[i].length   car = longeur des lignes // pour parcourir chacune des  colonnes
-        console.log(mines[i][j]);       // tableau 2 dimensions
-    }
-}
+//for (let i = 0; i < mines.length; i++) {        // pour parcourir chacune des lignes
+  //  console.log(mines[i]);
+    //for (let j = 0; j < mines[i].length; j++) {     // mines[i].length   car = longeur des lignes // pour parcourir chacune des  colonnes
+      //  console.log(mines[i][j]);       // tableau 2 dimensions
+    //}
+//}
 
 /* 
 EXERCICE :
@@ -42,17 +42,30 @@ mines[0][3] // ………………………………………………………�
 // Etape 1 :
 // Pour récupérer la valeur à la deuxième ligne troisième colonne du tableau,
 // utilisez les indices corrects (n'oubliez pas que les indices commencent à zéro).
-console.log(mines[1][2]);
+//console.log(mines[1][2]);
 
 
 // Testez de la même manière l'emplacement situé en première ligne quatrième colonne
-console.log(mines[0][3]);
+//console.log(mines[0][3]);
 
 // Etape 2 :
 // Pour indiquer combien de mines contient la première ligne de ce tableau,
 // vous devez parcourir les éléments de cette ligne et compter combien d'entre eux sont égaux à 1.
-console.log(mines[0][mines.length]);
+    console.log(mines[0]);
 
-//for (let i = 0; i < mines.length; i++) {
-  //  if ()
-//}
+    let combiendemines = 0;
+
+    if ( mines[0]) {
+       // console.log(mines[i]);        Ne pas faire ! crash
+        for (let j = 0; j < mines[0].length; j++) {     // mines[i].length   car = longeur des lignes // pour parcourir chacune des  colonnes
+            if (mines[0][j]=== 1){
+                combiendemines ++;
+            } else {
+                combiendemines;
+            }
+        }
+        }
+    else{
+        console.log('erreur');
+    }
+    console.log(`Il y a ${combiendemines} qui sont égaux à 1`);
