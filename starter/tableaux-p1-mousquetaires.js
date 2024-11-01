@@ -11,6 +11,40 @@ TABLEAUX - PRÉPA 1 : Les trois mousquetaires
    Précédez le texte "Le pauvre Aramis est mort…".
 */
 const mousquetaires=['Athos', 'Porthos', 'Aramis'];
+
+console.log("Voici les Trois Mousquetaires :");
+for (let i = 0; i<= mousquetaires.length; i++){
+    console.log(mousquetaires[i]);
+}
+mousquetaires.push('Artagnan');
+
+console.log("Ils sont quatre à présent :");
+for (let mousquetaire of mousquetaires) {
+    console.log(mousquetaire);
+}
+const enleve = mousquetaires.splice(2,1);
+console.log(mousquetaires);
+
+console.log("Le pauvre Aramis est mort…");
+for (let mousquetaire2 of mousquetaires) {
+    console.log(mousquetaire2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 for (true){
     console.log("Voici les Trois Mousquetaires :");
     if (mousquetaires['Athos']){
@@ -21,3 +55,5 @@ for (true){
      console.log('Aramis');
     }
 }
+
+ */
