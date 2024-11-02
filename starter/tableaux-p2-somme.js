@@ -14,6 +14,20 @@ console.log(nombres);
 console.table(nombres);
 
 
+
+let resultat = 0
+for (const nombre of nombres) {
+    resultat = resultat + nombre;
+}
+console.log(resultat);
+
+
+
+
+
+
+
+/*
 let sommeTableau = 0
 for (let nombre of nombres) {
     sommeTableau = sommeTableau + nombre;
@@ -21,7 +35,7 @@ for (let nombre of nombres) {
 }
 console.log(`La somme des nombres de mon tableau est ${sommeTableau}`);
 
-
+*/
 /*
 let lasommeTableau = 0
 for (let i = 0; i<= nombres.length; i++){
@@ -55,18 +69,19 @@ let somme = 0;
 
 
 for (let i = 0; i < nombres.length; i++) {
-    if (i < nombres.length) {
+    if (i < nombres.length-1 ) {
         somme = somme + nombres[i];
         message += `${nombres[i]} +`;
-        if (i === nombres.length){
+
+    }else if (i === nombres.length -1){
             somme = somme + nombres[i];
-            message += `${nombres[i]} = ${somme}`;
+            message += `${nombres[i]} `;
         }
-    }else {
+    else{
         console.log('erreur!');
     }
 }
-console.log(message);
+console.log(`${message} = ${somme}`);
 
 
 /*
