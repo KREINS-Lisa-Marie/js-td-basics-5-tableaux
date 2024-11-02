@@ -12,7 +12,7 @@ TABLEAUX - PRÉPA 4 : Date valide - version 3
     // Code pour déterminer si 'annee' est bissextile
 //}
 
-function isBissextile(annee) {
+function isBissextile(year) {
     if (year%4 ===0 && year%100 !== 0){
         return true;
     } else if (year%400 === true){
@@ -21,23 +21,49 @@ function isBissextile(annee) {
     return false;
 }
 
+// Fonction pour vérifier si une date est valide
+//function isValid(jour, mois, annee) {
+// Code pour vérifier si la date (jour, mois, annee) est valide
+//}
 
 
 
-
-function getMaxDayPerMonth(month, year) {
-    if (isNaN(month) || month < 1 || month > 12 || isNaN(year) || year < 1) {
-        console.error(`Month must be [1-12]`);
-        console.error(`Year must be >0`);
-        return -1;
+    function getMaxDayPerMonth(month, year) {
+        const nombreMaxMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        if (isNaN(month) || month < 1 || month > 12 || isNaN(year) || year < 1) {
+            console.error(`Month must be [1-12]`);
+            console.error(`Year must be >0`);
+            return - 1;
+        }
+        if (isBissextile(year) === true && month === 2) {
+            nombreMaxMois[1] = 29;
+            return nombreMaxMois[1];
+        }return nombreMaxMois[1] = 28;
     }
-
-    const nombreMaxMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    if (isBissextile() === true) {
-        nombreMaxMois[2] = 29;
-    }
-
+    function isValid(day, month, year) {
+            if (isNaN(day) || isNaN(month) || isNaN(year) || day <= 0 || month <= 0 || year <= 0 || month > 12) {
+                return false;
+            }
+    return day > 0 && day <= getMaxDayPerMonth(month, year);
 }
+
+ if (isValid( 29, 2, 2024)){
+     console.log("La date est valide !");
+ } else {
+     console.log("La date est invalide.");
+ }
+
+
+// Utilisez 'isValid' pour vérifier si une date est valide avant d'afficher un message dans la console
+//isValid(29, 2, 2024);
+
+
+
+
+
+
+
+
     /*
     let maxDays = 31;
     switch (month) {
@@ -61,22 +87,3 @@ function getMaxDayPerMonth(month, year) {
 
 
 
-// Fonction pour vérifier si une date est valide
-//function isValid(jour, mois, annee) {
-    // Code pour vérifier si la date (jour, mois, annee) est valide
-//}
-
-
-function isValid(day, month, year) {
-    if (isNaN(day) || isNaN(month) || isNaN(year) || day <= 0 || month <= 0 || year <= 0 || month > 12) {
-        return false;
-    }
-    return day > 0 && day <= getMaxDayPerMonth(month, year);
-}
-
-
-
-// Utilisez 'isValid' pour vérifier si une date est valide avant d'afficher un message dans la console
-
-
-isValid();
