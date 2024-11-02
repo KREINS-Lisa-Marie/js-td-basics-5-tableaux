@@ -17,7 +17,15 @@ const mines = [[0, 1, 0, 1],
              [0, 0, 0, 0]];
 
 
-// pour parcourir le tableau
+
+for (let i =0; i< mines.length; i++){               // nur bis <mines.length weil der geht ja eh noch eins weiter und sonst holt der eine zahl weiter als ende und dann ist das undefinded
+    for (let j=0; j <mines[i].length; j++){
+        console.log(mines[i][j]);
+    }
+}
+
+
+// pour parcourir le tableau.   solution prof
 
 //for (let i = 0; i < mines.length; i++) {        // pour parcourir chacune des lignes
   //  console.log(mines[i]);
@@ -55,6 +63,31 @@ mines[0][3] // ………………………………………………………�
 
     let combiendemines = 0;
 
+
+for (let i = 0; i < mines[0].length; i++) {
+    if (mines[0][i] >0){
+         combiendemines = combiendemines + 1;
+    }
+}
+console.log(combiendemines)
+
+
+
+
+
+
+
+
+
+
+/*
+
+mes essais
+
+
+
+
+
     if ( mines[0]) {
        // console.log(mines[i]);        Ne pas faire ! crash
         for (let j = 0; j < mines[0].length; j++) {     // mines[i].length   car = longeur des lignes // pour parcourir chacune des  colonnes
@@ -69,3 +102,22 @@ mines[0][3] // ………………………………………………………�
         console.log('erreur');
     }
     console.log(`Il y a ${combiendemines} qui sont égaux à 1`);
+
+/*
+for (let i = 0; i < mines.length; i++) {
+    for (let j = 0; j <mines[i].length; j++){
+        console.log(mines[i][j]);
+    }
+}
+*/
+
+/*
+for (const ligne of mines) {
+    for (const colonne of ligne){
+        console.log(colonne);
+    }
+}
+
+
+
+*/

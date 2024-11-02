@@ -31,7 +31,9 @@ function calculateurPourboire(factures) {
     for (let i = 0; i < factures.length; i++) {
         montantsFinaux[i]= factures[i] + pourboires[i];           //factures[i]+= pourboires[i];
     }
-    return montantsFinaux;
+    //return montantsFinaux;
+    console.log(pourboires);
+    console.log(montantsFinaux);
 }
-console.log(pourboires);
-console.log(montantsFinaux);
+//console.log(calculateurPourboire());
+//console.log(montantsFinaux);

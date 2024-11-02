@@ -47,6 +47,28 @@ Version alternative (avec BONUS) :
 
 let message = '';
 let somme = 0;
+
+//for (const nombre of nombres)
+
+//}
+
+
+
+for (let i = 0; i < nombres.length; i++) {
+    if (i < nombres.length) {
+        somme = somme + nombres[i];
+        message += `${nombres[i]} +`;
+        if (i === nombres.length){
+            somme = somme + nombres[i];
+            message += `${nombres[i]} = ${somme}`;
+        }
+    }else {
+        console.log('erreur!');
+    }
+}
+console.log(message);
+
+
 /*
 for (let i = 0; i <=nombres.length; i++){
     console.log(  message = `${nombressomme(i===0)} + ${somme(i===1)} + ${somme(i===2)} + ${somme(i===3)} + ${somme(i===4)} + ${somme(i===5)}`);
