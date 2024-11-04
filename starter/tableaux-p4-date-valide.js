@@ -55,7 +55,8 @@ function isBissextile(year) {
      console.log("La date est invalide.");
  }
 
-
+isValid();
+ console.log(isValid(29, 2, 2024));
 // Utilisez 'isValid' pour vérifier si une date est valide avant d'afficher un message dans la console
 //isValid(29, 2, 2024);
 
