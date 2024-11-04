@@ -19,7 +19,56 @@ let resultat = 0
 for (const nombre of nombres) {
     resultat = resultat + nombre;
 }
-console.log(resultat);
+console.log(`La somme des nombres de mon tableau est ${resultat}`);
+
+
+/*
+Version alternative (avec BONUS) :
+1. Initialisez
+- une variable 'message' à une chaîne vide ;
+- une variable 'somme' à 0.
+2. Parcourez votre tableau de nombres à l'aide d'une boucle 'for' pour construire le message : "… + … + … = ".
+3. Parcourez votre tableau de nombres à l'aide d'une boucle 'for/of' pour calculer la somme des valeurs du tableau.
+4. Affichez le message final : "… + … + … = …".
+*/
+
+
+
+let message = '';
+let somme = 0;
+
+//for (const nombre of nombres)
+
+//}
+
+/*
+for (const nombre of nombres) {
+    somme = somme + nombre;
+}
+*/
+
+for (let i = 0; i < nombres.length; i++) {
+    if (i < nombres.length-1 ) {
+        somme = somme + nombres[i];
+        message += `${nombres[i]} +`;
+
+    }else if (i === nombres.length -1){
+            somme = somme + nombres[i];
+            message += `${nombres[i]} `;
+        }
+    else{
+        console.log('erreur!');
+    }
+}
+console.log(`${message} = ${somme}`);
+
+
+
+
+
+
+
+
 
 
 
@@ -43,46 +92,6 @@ for (let i = 0; i<= nombres.length; i++){
     console.log(lasommeTableau);
 }
 */
-
-
-
-
-/*
-Version alternative (avec BONUS) :
-1. Initialisez
-- une variable 'message' à une chaîne vide ;
-- une variable 'somme' à 0.
-2. Parcourez votre tableau de nombres à l'aide d'une boucle 'for' pour construire le message : "… + … + … = ".
-3. Parcourez votre tableau de nombres à l'aide d'une boucle 'for/of' pour calculer la somme des valeurs du tableau.
-4. Affichez le message final : "… + … + … = …".
-*/
-
-
-
-let message = '';
-let somme = 0;
-
-//for (const nombre of nombres)
-
-//}
-
-
-
-for (let i = 0; i < nombres.length; i++) {
-    if (i < nombres.length-1 ) {
-        somme = somme + nombres[i];
-        message += `${nombres[i]} +`;
-
-    }else if (i === nombres.length -1){
-            somme = somme + nombres[i];
-            message += `${nombres[i]} `;
-        }
-    else{
-        console.log('erreur!');
-    }
-}
-console.log(`${message} = ${somme}`);
-
 
 /*
 for (let i = 0; i <=nombres.length; i++){
