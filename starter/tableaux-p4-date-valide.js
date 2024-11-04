@@ -38,13 +38,15 @@ function isBissextile(year) {
         if (isBissextile(year) === true && month === 2) {
             nombreMaxMois[1] = 29;
             return nombreMaxMois[1];
-        }return nombreMaxMois[1] = 28;
+        }return nombreMaxMois[month - 1] ;
     }
+
     function isValid(day, month, year) {
             if (isNaN(day) || isNaN(month) || isNaN(year) || day <= 0 || month <= 0 || year <= 0 || month > 12) {
                 return false;
             }
-    return day > 0 && day <= getMaxDayPerMonth(month, year);
+            const date = (day > 0) && (day <= getMaxDayPerMonth(month, year));
+    return date;
 }
 
  if (isValid( 29, 2, 2024)){
